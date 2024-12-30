@@ -69,7 +69,7 @@ export default function ServicesPage() {
           {/* Background Image */}
           <div className="absolute top-0 left-0 w-full h-full">
             <Image
-              src={service.image}
+              src={service.image!}
               alt={`${service.title} Background`}
               layout="fill"
               objectFit="cover"
