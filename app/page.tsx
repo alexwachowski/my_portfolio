@@ -242,11 +242,12 @@ export default function Home() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     // Add form handling logic here
-    console.log({ name, email, message })
-  }
+    console.log({ name, email, message });
+  };
+  
 
 const portfolioImages = [
   '/images/portfolio_mockup_1.png', 
