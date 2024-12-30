@@ -249,13 +249,29 @@ export default function Home() {
   };
   
 
-const portfolioImages = [
-  '/images/portfolio_mockup_1.png', 
-  '/images/portfolio_mockup_2.png', 
-  '/images/portfolio_mockup_3.png',
-  '/images/portfolio_mockup_4.png',
-];
-
+  const portfolioItems = [
+    {
+      image: '/images/portfolio_mockup_1.png',
+      title: 'E-commerce Website',
+      description: 'A modern e-commerce platform built with Next.js and TailwindCSS.',
+    },
+    {
+      image: '/images/portfolio_mockup_2.png',
+      title: 'Portfolio Website',
+      description: 'A sleek personal portfolio showcasing projects and skills.',
+    },
+    {
+      image: '/images/portfolio_mockup_3.png',
+      title: 'Blog Platform',
+      description: 'A content-focused blog site with dynamic routing and markdown support.',
+    },
+    {
+      image: '/images/portfolio_mockup_4.png',
+      title: 'SaaS Dashboard',
+      description: 'A SaaS analytics dashboard with interactive charts and responsive design.',
+    },
+  ];
+  
   return (
     <div className="min-h-screen bg-black animate-fade-in">
       <Head>
@@ -269,7 +285,7 @@ const portfolioImages = [
           <div className="flex justify-between items-center">
             <div className="text-xl font-bold">Alex Wachowski</div>
             <div className="flex space-x-4">
-              <a href="#services" className="hover:text-blue-600">Services</a>
+              <a href="/services" className="hover:text-blue-600">Services</a>
               <a href="#portfolio" className="hover:text-blue-600">Portfolio</a>
               <a href="#contact" className="hover:text-blue-600">Contact</a>
             </div>
@@ -338,22 +354,22 @@ const portfolioImages = [
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Recent Work</h2>
           <div className="grid md:grid-cols-2 gap-12"> {/* Increased gap for better spacing */}
-            {portfolioImages.map((imageSrc, index) => (
+            {portfolioItems.map((item, index) => (
               <div
                 key={index}
                 className="bg-gray-900 rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105 hover:bg-gray-800"
               >
                 <Image
-                  src={imageSrc}
-                  alt={`Project ${index + 1}`}
+                  src={item.image}
+                  alt={item.title}
                   width={600}
                   height={400}
                   className="w-full h-64 object-cover" 
                 />
                 <div className="p-8"> {/* Increased padding for a larger content area */}
-                  <h3 className="text-xl font-bold mb-2">Project Title {index + 1}</h3>
+                  <h3 className="text-xl font-bold mb-2">Project Title {item.title}</h3>
                   <p className="text-gray-400">
-                    Description of project and technologies used
+                  {item.description}
                   </p>
                 </div>
               </div>
