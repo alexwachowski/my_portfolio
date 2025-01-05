@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import WaveSection from "../components/WaveSection";
-
+import Link from "next/link";
 
 
 export default function ServicesPage() {
@@ -52,11 +52,13 @@ export default function ServicesPage() {
         <nav className="bg-black shadow-lg">
             <div className="max-w-6xl mx-auto px-4 py-3">
                 <div className="flex justify-between items-center">
-                    <div className="text-xl font-bold">Alex Wachowski</div>
+                    <div className="text-xl font-bold">
+                      <Link href="/">Alex Wachowski</Link>
+                    </div>
                     <div className="flex space-x-4">
                         <a href="/services" className="hover:text-blue-600">Services</a>
-                        <a href="#portfolio" className="hover:text-blue-600">Portfolio</a>
-                        <a href="#contact" className="hover:text-blue-600">Contact</a>
+                        <a href="/portfolio" className="hover:text-blue-600">Portfolio</a>
+                        <a href="/contact" className="hover:text-blue-600">Contact</a>
                     </div>
                 </div>
             </div>

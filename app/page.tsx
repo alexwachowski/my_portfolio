@@ -286,8 +286,8 @@ export default function Home() {
             <div className="text-xl font-bold">Alex Wachowski</div>
             <div className="flex space-x-4">
               <a href="/services" className="hover:text-blue-600">Services</a>
-              <a href="#portfolio" className="hover:text-blue-600">Portfolio</a>
-              <a href="#contact" className="hover:text-blue-600">Contact</a>
+              <a href="/portfolio" className="hover:text-blue-600">Portfolio</a>
+              <a href="/contact" className="hover:text-blue-600">Contact</a>
             </div>
           </div>
         </div>
