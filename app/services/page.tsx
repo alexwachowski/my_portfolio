@@ -42,7 +42,7 @@ export default function ServicesPage() {
             {
               title: 'E-commerce Solutions',
               description: 'Building custom e-commerce platforms with seamless integrations',
- 
+              image: null
             },
           ];
 
