@@ -251,14 +251,14 @@ export default function Home() {
 
   const portfolioItems = [
     {
-      image: '/images/portfolio_mockup_1.png',
-      title: 'E-commerce Website',
-      description: 'A modern e-commerce platform built with Next.js and TailwindCSS.',
+      image: '/images/assistant-logo.jpg',
+      title: 'AI assistant',
+      description: 'An AI assitant have conversations use information from files you upload',
     },
     {
-      image: '/images/portfolio_mockup_2.png',
-      title: 'Portfolio Website',
-      description: 'A sleek personal portfolio showcasing projects and skills.',
+      image: '/images/jeremiah.png',
+      title: 'Personal Brand site',
+      description: 'A website built for a personal trainer in the Texas hillcountry',
     },
     {
       image: '/images/portfolio_mockup_3.png',

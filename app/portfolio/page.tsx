@@ -20,6 +20,7 @@ interface PortfolioItem {
   title: string;
   description: string;
   tags: string[];
+  link: string;
 }
 
 const Spotlight: React.FC<SpotlightProps> = ({ mousePosition }) => {
@@ -35,28 +36,32 @@ const Spotlight: React.FC<SpotlightProps> = ({ mousePosition }) => {
 
 const portfolioItems: PortfolioItem[] = [
   {
-    image: '/images/portfolio_mockup_1.png',
-    title: 'E-commerce Website',
-    description: 'A modern e-commerce platform built with Next.js and TailwindCSS.',
-    tags: ['Next.js', 'TailwindCSS', 'Redux']
+    image: '/images/assistant-logo.jpg',
+    title: 'AI assistant',
+    description: 'An AI assitant have conversations use information from files you upload',
+    tags: ['Next.js', 'TailwindCSS', 'Redux'],
+    link: "https://my-ai-production.up.railway.app"
   },
   {
-    image: '/images/portfolio_mockup_2.png',
-    title: 'Portfolio Website',
-    description: 'A sleek personal portfolio showcasing projects and skills.',
-    tags: ['React', 'TailwindCSS']
+    image: '/images/jeremiah.png',
+    title: 'Personal Brand site',
+    description: 'A website built for a personal trainer in the Texas hillcountry',
+    tags: ['React', 'TailwindCSS'], 
+    link: "https://jeremiah-training.vercel.app"
   },
   {
     image: '/images/portfolio_mockup_3.png',
     title: 'Blog Platform',
     description: 'A content-focused blog site with dynamic routing and markdown support.',
-    tags: ['Next.js', 'MDX', 'TailwindCSS']
+    tags: ['Next.js', 'MDX', 'TailwindCSS'],
+    link: "https://blog-example.com"
   },
   {
     image: '/images/portfolio_mockup_4.png',
     title: 'SaaS Dashboard',
     description: 'A SaaS analytics dashboard with interactive charts and responsive design.',
-    tags: ['React', 'ChartJS', 'TailwindCSS']
+    tags: ['React', 'ChartJS', 'TailwindCSS'],
+    link: "https://dashboard-example.com"
   },
 ];
 
@@ -101,11 +106,14 @@ const Portfolio: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {portfolioItems.map((item, index) => (
-            <div
+            <Link
+              href={item.link}
               key={index}
-              className="group bg-gray-800 rounded-none overflow-hidden hover:bg-gray-700 transition duration-500"
+              className="block group bg-gray-800 rounded-none overflow-hidden hover:bg-gray-700 transition duration-500"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
+              target='_blank'
+              rel='noopener noreferrer'
             >
               <div className="relative">
                 <Image
@@ -131,7 +139,7 @@ const Portfolio: React.FC = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
